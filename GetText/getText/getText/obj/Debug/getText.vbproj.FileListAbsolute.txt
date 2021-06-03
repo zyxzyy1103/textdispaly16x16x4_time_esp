@@ -1,0 +1,12 @@
+C:\Users\zyxcy\Downloads\GetText\getText\getText\bin\Debug\getText.exe.config
+C:\Users\zyxcy\Downloads\GetText\getText\getText\bin\Debug\getText.exe
+C:\Users\zyxcy\Downloads\GetText\getText\getText\bin\Debug\getText.pdb
+C:\Users\zyxcy\Downloads\GetText\getText\getText\bin\Debug\getText.xml
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.vbprojAssemblyReference.cache
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.Form1.resources
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.Resources.resources
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.vbproj.GenerateResource.cache
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.vbproj.CoreCompileInputs.cache
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.exe
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.xml
+C:\Users\zyxcy\Downloads\GetText\getText\getText\obj\Debug\getText.pdb
