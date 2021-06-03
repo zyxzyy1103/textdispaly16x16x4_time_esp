@@ -57,20 +57,20 @@ void CDisplay::Init() {
   uint8_t i;
   
   for(i=0; i<8; i++) pinMode(DATA_D[i], OUTPUT);
-	for(i=0; i<2; i++) pinMode(DATA_S[i], OUTPUT);
-	for(i=0; i<4; i++) pinMode(SCAN_D[i],	OUTPUT);
-	for(i=0; i<3; i++) pinMode(SCAN_S[i], OUTPUT);
+  for(i=0; i<2; i++) pinMode(DATA_S[i], OUTPUT);
+  for(i=0; i<4; i++) pinMode(SCAN_D[i],	OUTPUT);
+  for(i=0; i<3; i++) pinMode(SCAN_S[i], OUTPUT);
 }
 
 void CDisplay::Loop() {
   static uint8_t clear = 0;
   static uint8_t line = 0;
-	static uint8_t block = 0;
+  static uint8_t block = 0;
   uint8_t i, j;
   
   // 更新掃描線
   for(i=0; i<3; i++) digitalWrite(SCAN_S[i], ic74138[block][i]);
-	for(i=0; i<4; i++) digitalWrite(SCAN_D[i], ic74154[line][i]);
+  for(i=0; i<4; i++) digitalWrite(SCAN_D[i], ic74154[line][i]);
   //
   
   //
@@ -78,18 +78,18 @@ void CDisplay::Loop() {
     //
     for(i=0; i<2; i++) {
       //
-			for(j=0; j<8; j++) digitalWrite(DATA_D[j + 8 * i], 0);
+      for(j=0; j<8; j++) digitalWrite(DATA_D[j + 8 * i], 0);
       //
-			digitalWrite(DATA_S[i], 0);
-			digitalWrite(DATA_S[i], 1);
+      digitalWrite(DATA_S[i], 0);
+      digitalWrite(DATA_S[i], 1);
       //
-		}
+    }
     //
   }else{
     //
     for(i=0; i<2; i++) {
       //
-			for(j=0; j<8; j++) {
+      for(j=0; j<8; j++) {
         if(i == 0) {
           if(bitBuffer[j + 0][line + 16 * block] == 1) digitalWrite(DATA_D[j], 1); else digitalWrite(DATA_D[j], 0);
         }else{ 
@@ -97,24 +97,24 @@ void CDisplay::Loop() {
         }
       }
       //
-			digitalWrite(DATA_S[i], 0);
-			digitalWrite(DATA_S[i], 1);
+      digitalWrite(DATA_S[i], 0);
+      digitalWrite(DATA_S[i], 1);
       //
-		}
+    }
     //
   }
   //
   
   // clear >> line >> block
   if(++clear == 2) {
-		clear = 0;
-		if(++line == 16) {
-			line = 0;
-			if(++block == 4) {
-				block = 0;
-			}
-		}
-	}
+    clear = 0;
+    if(++line == 16) {
+      line = 0;
+      if(++block == 4) {
+        block = 0;
+      }
+    }
+  }
   //
 }
 
